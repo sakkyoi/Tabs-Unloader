@@ -1,0 +1,35 @@
+{
+  "appName": {
+    "message": "Tabs Unloader"
+  },
+  "onInstalled": {
+    "message": "Thanks for choosing Chrome Tabs Unloader. If you are new for Chrome Tabs Unloader, please see the user guide on Github."
+  },
+  "onUpdated": {
+    "message": "Thanks for updating Chrome Tabs Unloader. Please see what's new in new version on Github."
+  },
+  "appDescription": {
+    "message": "An extension which stops Chrome from eating all of your memory."
+  },
+  "unload" : {
+    "message": "Unload Tab"
+  },
+  "unloadThis" : {
+    "message": "Unload This Tab"
+  },
+  "unloadAllExceptThis" : {
+    "message": "Unload All Tabs Except This"
+  },
+  "unloadAll" : {
+    "message": "Unload All Tabs"
+  },
+  "unloadAllFromThisWindowExceptThis" : {
+    "message": "Unload All Tabs From this Window Except This"
+  },
+  "unloadAllFromThisWindow" : {
+    "message": "Unload All Tabs From this Window"
+  },
+  "unloadSelected": {
+    "message": "Unload This Tab or Selected Tabs"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "appName": {
+    "message": "分頁終結者"
+  },
+  "onInstalled": {
+    "message": "感謝安裝分頁終結者，第一次使用的話，敬請前往Github查看使用教學。"
+  },
+  "onUpdated": {
+    "message": "感謝更新分頁終結者，敬請前往Github查看更新內容。"
+  },
+  "appDescription": {
+    "message": "終結分頁，節省記憶！"
+  },
+  "unload" : {
+    "message": "分頁終結者"
+  },
+  "unloadThis" : {
+    "message": "終結此分頁"
+  },
+  "unloadAllExceptThis" : {
+    "message": "終結除了這個這個以外的分頁"
+  },
+  "unloadAll" : {
+    "message": "終結所有分頁"
+  },
+  "unloadAllFromThisWindowExceptThis" : {
+    "message": "終結這個視窗中除了這個以外的分頁"
+  },
+  "unloadAllFromThisWindow" : {
+    "message": "終結這個視窗中所有分頁"
+  },
+  "unloadSelected": {
+    "message": "終結這個分頁或被選中的分頁"
+  }
+}
