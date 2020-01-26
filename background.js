@@ -1,11 +1,12 @@
 // On installed
+/*
 chrome.runtime.onInstalled.addListener((details) => {
 
     switch (details.reason) {
 
         case "install":
             if (confirm(chrome.i18n.getMessage("onInstalled"))) {
-                window.open("https://github.com/sakkyoi/Chrome-Tabs-Unloader");
+                //window.open("https://github.com/sakkyoi/Chrome-Tabs-Unloader");
             } else {
                 // Nothing
             }
@@ -13,7 +14,7 @@ chrome.runtime.onInstalled.addListener((details) => {
         case "update":
             if (chrome.runtime.getManifest().version !== details.previousVersion) {
                 if (confirm(chrome.i18n.getMessage("onUpdated"))) {
-                    window.open("https://github.com/sakkyoi/Chrome-Tabs-Unloader");
+                    //window.open("https://github.com/sakkyoi/Chrome-Tabs-Unloader");
                 } else {
                     // Nothing
                 }
@@ -23,6 +24,7 @@ chrome.runtime.onInstalled.addListener((details) => {
     }
 
 });
+*/
 
 // Initialization Contextmenu
 chrome.contextMenus.create({"id": "unload", "title": chrome.i18n.getMessage("unload")});
