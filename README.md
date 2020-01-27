@@ -64,6 +64,3 @@ An extension which stops Chrome from eating all of your memory.
   |終結所有分頁|將所有開啟中分頁載卸|
   |終結這個視窗中除了這個以外的分頁|將目前視窗中除了目前分頁以外的所有開啟中分頁載卸|
   |終結這個視窗中所有分頁|將目前視窗中所有開啟中分頁載卸|
-
-## Credit
-  [GoneTone](https://github.com/GoneTone) Help publish to Chrome Web Store.
