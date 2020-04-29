@@ -1,5 +1,5 @@
 ![Logo](https://github.com/sakkyoi/Chrome-Tabs-Unloader/raw/master/banner.png)
-# Chrome Tab Unloader
+# Tab Unloader
 
 An extension which stops Chrome from eating all of your memory.
 
@@ -32,7 +32,7 @@ An extension which stops Chrome from eating all of your memory.
   |Unload All Tabs From this Window Except This|Unload all tabs you opened from current window except current tab.|
   |Unload All Tabs From this Window|Unload all tabs you opened from current window.|
 
-# Chrome 分頁終結者
+# 分頁終結者
 
 終結分頁，節省記憶！
 
