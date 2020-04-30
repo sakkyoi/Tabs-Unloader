@@ -15,6 +15,7 @@ An extension which stops Chrome from eating all of your memory.
   4. Click the "LOAD UNPACKED" button and select the extension directory.
   5. Detail in [https://developer.chrome.com/extensions/getstarted#manifest](https://developer.chrome.com/extensions/getstarted#manifest)
   6. Or Chrome Web Store......Coming Soon!
+  7. Also available in [https://microsoftedge.microsoft.com/addons/detail/cnefkmeedalkkciknnilnnfjponcbchh](Microsoft Edge Add-Ons Store)
 
 ## How to use
 
@@ -48,6 +49,7 @@ An extension which stops Chrome from eating all of your memory.
   4. 點擊「載入未封裝項目」，並選擇插件所在目錄。
   5. 更多內容可以前往 [https://developer.chrome.com/extensions/getstarted#manifest](https://developer.chrome.com/extensions/getstarted#manifest) 查看。
   6. 或是前往 Chrome 線上應用程式商店安裝......準備中！
+  7. 也可以至 [https://microsoftedge.microsoft.com/addons/detail/cnefkmeedalkkciknnilnnfjponcbchh](Microsoft Edge Add-Ons Store) 下載
 
 ## 如何使用
 
