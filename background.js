@@ -33,8 +33,11 @@ const contextMenuItems = ['unloadThis', 'unloadAllExceptThis', 'unloadAll', 'unl
 for (let contextMenuItem of contextMenuItems) {
     chrome.contextMenus.create({ 'id': contextMenuItem, 'title': chrome.i18n.getMessage(contextMenuItem) });
 }
+chrome.contextMenus.create({ 'id': '_', 'type': 'separator' });
+chrome.contextMenus.create({ 'id': '_preference', 'title': chrome.i18n.getMessage('preferenceButton') });
 
 // Listener for contextmenu
 chrome.contextMenus.onClicked.addListener(async (info, tab) => {
     unloader(info.menuItemId);
+    if (info.menuItemId === '_preference') chrome.tabs.create({ 'url': `extension://${chrome.runtime.id}/preferences.html` });
 });

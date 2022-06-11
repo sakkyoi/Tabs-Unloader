@@ -4,34 +4,29 @@ import unloader from './lib/unloader.js';
 const menuItems = ['unloadSelected', 'unloadAllExceptThis', 'unloadAll', 'unloadAllFromThisWindowExceptThis', 'unloadAllFromThisWindow'];
 
 // Create element of popup page
-let menu = document.createElement('div');
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    menu.className = 'menu-dark';
-} else {
-    menu.className = 'menu-light';
-}
-let menuOptions = document.createElement('ul');
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    menuOptions.className = 'menu-dark-options';
-} else {
-    menuOptions.className = 'menu-light-options';
-}
+const menu = document.getElementById('menu');
 
 for (let menuItem of menuItems) {
-    let menuOption = document.createElement('li');
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        menuOption.className = 'menu-dark-option';
-    } else {
-        menuOption.className = 'menu-light-option';
-    }
-    menuOption.id = menuItem;
+    const menuOption = document.createElement('a');
+    menuOption.classList.add("item");
     menuOption.textContent = chrome.i18n.getMessage(menuItem);
-    menuOption.addEventListener('click', (target) => {
-        unloader(target.target.id);
+    menuOption.addEventListener('click', async () => {
+        unloader(menuItem);
         window.close();
     });
-    menuOptions.appendChild(menuOption);
+    menu.appendChild(menuOption);
 }
 
-menu.appendChild(menuOptions);
-document.body.appendChild(menu);
+const divider = document.createElement('div');
+divider.classList.add('ts-divider');
+
+menu.appendChild(divider);
+
+const preferenceButton = document.createElement('a');
+preferenceButton.classList.add('item');
+preferenceButton.textContent = chrome.i18n.getMessage('preferenceButton');
+preferenceButton.addEventListener('click', async () => {
+    chrome.tabs.create({ 'url': `extension://${chrome.runtime.id}/preferences.html` });
+});
+
+menu.appendChild(preferenceButton);

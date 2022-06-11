@@ -31,5 +31,8 @@
   },
   "unloadSelected": {
     "message": "Unload This Tab or Selected Tabs"
+  },
+  "preferenceButton": {
+    "message": "Preference"
   }
 }

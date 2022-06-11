@@ -31,5 +31,8 @@
   },
   "unloadSelected": {
     "message": "終結這個分頁或被選中的分頁"
+  },
+  "preferenceButton": {
+    "message": "偏好設定"
   }
 }

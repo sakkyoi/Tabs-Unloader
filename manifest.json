@@ -17,6 +17,7 @@
     "default_title": "__MSG_appName__",
     "default_popup": "popup.html"
   },
+  "options_page": "preferences.html",
   "permissions": [
     "contextMenus",
     "tabs",
