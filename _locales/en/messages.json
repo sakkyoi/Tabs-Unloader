@@ -11,9 +11,6 @@
   "appDescription": {
     "message": "An extension which stops Chrome from eating all of your memory."
   },
-  "unload" : {
-    "message": "Unload Tab"
-  },
   "unloadThis" : {
     "message": "Unload This or Selected Tab(s)"
   },

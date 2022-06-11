@@ -11,23 +11,20 @@
   "appDescription": {
     "message": "終結分頁，節省記憶！"
   },
-  "unload" : {
-    "message": "分頁終結者"
-  },
   "unloadThis" : {
-    "message": "終結此分頁或被選中的分頁"
+    "message": "卸載目前及被選中的分頁"
   },
   "unloadAllExceptThis" : {
-    "message": "終結除了這個這個以外的分頁"
+    "message": "卸載其他分頁"
   },
   "unloadAll" : {
     "message": "終結所有分頁"
   },
   "unloadAllFromThisWindowExceptThis" : {
-    "message": "終結這個視窗中除了這個以外的分頁"
+    "message": "終結目前視窗中其他分頁"
   },
   "unloadAllFromThisWindow" : {
-    "message": "終結這個視窗中所有分頁"
+    "message": "終結目前視窗中所有分頁"
   },
   "preferenceButton": {
     "message": "偏好設定"
