@@ -1,3 +1,5 @@
+import unloader from './lib/unloader.js';
+
 // On installed
 /*
 chrome.runtime.onInstalled.addListener((details) => {
@@ -27,101 +29,12 @@ chrome.runtime.onInstalled.addListener((details) => {
 */
 
 // Initialization Contextmenu
-chrome.contextMenus.create({"id": "unload", "title": chrome.i18n.getMessage("unload")});
-chrome.contextMenus.create({"id": "unloadThis", "parentId": "unload", "title": chrome.i18n.getMessage("unloadThis")});
-chrome.contextMenus.create({"id": "unloadAllExceptThis", "parentId": "unload", "title": chrome.i18n.getMessage("unloadAllExceptThis")});
-chrome.contextMenus.create({"id": "unloadAll", "parentId": "unload", "title": chrome.i18n.getMessage("unloadAll")});
-chrome.contextMenus.create({"id": "unloadAllFromThisWindowExceptThis", "parentId": "unload", "title": chrome.i18n.getMessage("unloadAllFromThisWindowExceptThis")});
-chrome.contextMenus.create({"id": "unloadAllFromThisWindow", "parentId": "unload", "title": chrome.i18n.getMessage("unloadAllFromThisWindow")});
+const contextMenuItems = ['unloadThis', 'unloadAllExceptThis', 'unloadAll', 'unloadAllFromThisWindowExceptThis', 'unloadAllFromThisWindow'];
+for (let contextMenuItem of contextMenuItems) {
+    chrome.contextMenus.create({ 'id': contextMenuItem, 'title': chrome.i18n.getMessage(contextMenuItem) })
+}
 
 // Listener for contextmenu
-chrome.contextMenus.onClicked.addListener((info, tab) => {
-
-    switch (info.menuItemId) {
-
-        case "unloadThis":
-        case "unload":
-            chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-
-                let currTab = tabs[0].id;
-                chrome.tabs.discard(currTab);
-
-            });
-            break;
-        case "unloadAllExceptThis":
-            chrome.tabs.query({discarded: false}, function(tabs) {
-
-                chrome.tabs.query({active: true, currentWindow: true}, function(tabThis) {
-
-                    let currTab = tabThis[0].id;
-
-                    let tabIds = [];
-                    tabs.forEach((tab) => {
-                        tabIds.push(tab.id);
-                    });
-
-                    tabIds.splice(tabIds.indexOf(currTab), 1);
-
-                    tabIds.forEach((id) => {
-                        chrome.tabs.discard(id);
-                    });
-
-                });
-
-            });
-            break;
-        case "unloadAll":
-            chrome.tabs.query({discarded: false}, function(tabs) {
-
-
-                let tabIds = [];
-                tabs.forEach((tab) => {
-                    tabIds.push(tab.id);
-                });
-
-                tabIds.forEach((id) => {
-                    chrome.tabs.discard(id);
-                });
-
-            });
-            break;
-        case "unloadAllFromThisWindowExceptThis":
-            chrome.tabs.query({discarded: false, currentWindow: true}, function(tabs) {
-
-                chrome.tabs.query({active: true, currentWindow: true}, function(tabThis) {
-
-                    let currTab = tabThis[0].id;
-
-                    let tabIds = [];
-                    tabs.forEach((tab) => {
-                        tabIds.push(tab.id);
-                    });
-
-                    tabIds.splice(tabIds.indexOf(currTab), 1);
-
-                    tabIds.forEach((id) => {
-                        chrome.tabs.discard(id);
-                    });
-
-                });
-
-            });
-            break;
-        case "unloadAllFromThisWindow":
-            chrome.tabs.query({discarded: false, currentWindow: true}, function(tabs) {
-
-                let tabIds = [];
-                tabs.forEach((tab) => {
-                    tabIds.push(tab.id);
-                });
-
-                tabIds.forEach((id) => {
-                    chrome.tabs.discard(id);
-                });
-
-            });
-            break;
-
-    }
-
+chrome.contextMenus.onClicked.addListener(async (info, tab) => {
+    unloader(info.menuItemId);
 });

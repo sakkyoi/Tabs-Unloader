@@ -1,5 +1,7 @@
-![Logo](https://github.com/sakkyoi/Chrome-Tabs-Unloader/raw/master/banner.png)
-# Tab Unloader
+![Logo](https://github.com/sakkyoi/Chrome-Tabs-Unloader/raw/master/asset/icon/banner.png)
+# Tab Unloader 2.0
+
+# Still working on it, not yet finished.
 
 An extension which stops Chrome from eating all of your memory.
 
@@ -20,8 +22,8 @@ An extension which stops Chrome from eating all of your memory.
 ## How to use
 
   1. There are two ways you can unload your tabs. One is by right click. The other is by the tool box in the top.
-  ![step1](https://github.com/sakkyoi/Chrome-Tabs-Unloader/raw/master/right-click.png)
-  ![step1](https://github.com/sakkyoi/Chrome-Tabs-Unloader/raw/master/toolbox.png)
+  ![step1](https://github.com/sakkyoi/Chrome-Tabs-Unloader/raw/master/asset/readme/right-click.png)
+  ![step1](https://github.com/sakkyoi/Chrome-Tabs-Unloader/raw/master/asset/readme/toolbox.png)
   2. There are six mode you can unload your tabs.
   
   |Mode|Description|
@@ -54,8 +56,8 @@ An extension which stops Chrome from eating all of your memory.
 ## 如何使用
 
   1. 有兩中方式可以終結分頁。一種是透過右鍵選單，另一種是在視窗頂部的工具箱。
-  ![step1](https://github.com/sakkyoi/Chrome-Tabs-Unloader/raw/master/right-click.png)
-  ![step1](https://github.com/sakkyoi/Chrome-Tabs-Unloader/raw/master/toolbox.png)
+  ![step1](https://github.com/sakkyoi/Chrome-Tabs-Unloader/raw/master/asset/readme/right-click.png)
+  ![step1](https://github.com/sakkyoi/Chrome-Tabs-Unloader/raw/master/asset/readme/toolbox.png)
   2. 有六種終結分頁的模式。
   
   |模式|說明|
