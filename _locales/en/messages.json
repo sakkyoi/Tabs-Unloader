@@ -15,7 +15,7 @@
     "message": "Unload Tab"
   },
   "unloadThis" : {
-    "message": "Unload This Tab"
+    "message": "Unload This or Selected Tab(s)"
   },
   "unloadAllExceptThis" : {
     "message": "Unload All Tabs Except This"
@@ -28,9 +28,6 @@
   },
   "unloadAllFromThisWindow" : {
     "message": "Unload All Tabs From this Window"
-  },
-  "unloadSelected": {
-    "message": "Unload This Tab or Selected Tabs"
   },
   "preferenceButton": {
     "message": "Preference"

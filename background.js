@@ -31,13 +31,18 @@ chrome.runtime.onInstalled.addListener((details) => {
 // Initialization Contextmenu
 const contextMenuItems = ['unloadThis', 'unloadAllExceptThis', 'unloadAll', 'unloadAllFromThisWindowExceptThis', 'unloadAllFromThisWindow'];
 for (let contextMenuItem of contextMenuItems) {
-    chrome.contextMenus.create({ 'id': contextMenuItem, 'title': chrome.i18n.getMessage(contextMenuItem) });
+    chrome.contextMenus.create({ 'id': contextMenuItem, 'title': chrome.i18n.getMessage(contextMenuItem), 'contexts': [ 'page', 'action' ] });
 }
-chrome.contextMenus.create({ 'id': '_', 'type': 'separator' });
-chrome.contextMenus.create({ 'id': '_preference', 'title': chrome.i18n.getMessage('preferenceButton') });
+chrome.contextMenus.create({ 'id': '_', 'type': 'separator', 'contexts': [ 'page', 'action' ] });
+chrome.contextMenus.create({ 'id': '_preference', 'title': chrome.i18n.getMessage('preferenceButton'), 'contexts': [ 'page', 'action' ] });
 
 // Listener for contextmenu
 chrome.contextMenus.onClicked.addListener(async (info, tab) => {
     unloader(info.menuItemId);
     if (info.menuItemId === '_preference') chrome.tabs.create({ 'url': `extension://${chrome.runtime.id}/preferences.html` });
+});
+
+// Listener for action
+chrome.action.onClicked.addListener(async () => {
+    unloader('unloadThis');
 });

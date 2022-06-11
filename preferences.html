@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="lib/tocas.min.css" />
+        <title>Preference</title>
+    </head>
+    <body>
+        <div class="ts-space is-huge"></div>
+        <div class="ts-container">
+            <div class="ts-segment is-very-padded">
+                <div class="ts-control">
+                    <div class="label">防誤觸</div>
+                    <div class="content is-padded">
+                        <label class="ts-switch">
+                            <input type="checkbox" checked />
+                            禁用快捷按鈕
+                        </label>
+                        <div class="ts-text is-description">
+                            若開啟此設定，直接點擊工具列快捷按鈕(網址列右方插件圖標) 將失去功能，你必須對圖標或是在頁面中點擊右鍵選擇卸載分頁的模式
+                        </div>
+                    </div>
+                </div>
+                <div class="ts-space is-large"></div>
+                <div class="ts-control">
+                    <div class="label">瀏覽器開啟時強制終結所有分頁</div>
+                    <div class="content is-padded">
+                        <label class="ts-switch">
+                            <input type="checkbox" checked />
+                            開啟瀏覽器時避免不必要的資源浪費
+                        </label>
+                    </div>
+                </div>
+                <div class="ts-space is-large"></div>
+                <div class="ts-divider"></div>
+                <div class="ts-space is-large"></div>
+                <div class="ts-control">
+                    <div class="label">語言</div>
+                    <div class="content is-padded">
+                        <div class="ts-input is-disabled">
+                            <input type="text" placeholder="locale">
+                        </div>
+                        <div class="ts-text is-description">
+                            語言切換必須透過瀏覽器本身來設定，詳情請參考 <a href="https://developer.chrome.com/docs/extensions/reference/i18n/#how-to-set-browsers-locale">How to set your browser's locale</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ts-space is-large"></div>
+                <div class="ts-divider"></div>
+                <div class="ts-space is-large"></div>
+                <div class="ts-control">
+                    <div class="label">儲存設定</div>
+                    <div class="content">
+                        <div class="ts-content is-rounded is-secondary is-padded">
+                            <button class="ts-button">儲存設定</button>
+                            <button class="ts-button is-outlined">取消</button>
+                            <div class="ts-space is-small"></div>
+                            <div class="ts-text is-description">請記得儲存讓設定起作用</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ts-space is-huge"></div>
+    </body>
+</html>

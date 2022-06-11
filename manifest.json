@@ -14,13 +14,14 @@
     "type": "module"
   },
   "action": {
-    "default_title": "__MSG_appName__",
-    "default_popup": "popup.html"
+    "default_icon": "asset/icon/icon_128.png",
+    "default_title": "__MSG_appName__"
   },
   "options_page": "preferences.html",
   "permissions": [
     "contextMenus",
     "tabs",
-    "storage"
+    "storage",
+    "declarativeContent"
   ]
 }
