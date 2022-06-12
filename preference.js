@@ -11,6 +11,6 @@
             chrome.storage.sync.set(preferenceObj);
         });
     }
-    const locale = await chrome.i18n.getUILanguage();
-    document.getElementById('locale').value = locale;
+    document.getElementById('locale').value = await chrome.i18n.getUILanguage();
+    document.getElementById('available-locale').textContent = (await chrome.i18n.getAcceptLanguages()).join(', ');
 })()
