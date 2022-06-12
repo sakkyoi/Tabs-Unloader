@@ -1,4 +1,7 @@
+import i18n from "./lib/i18nHtml.js";
+
 (async () => {
+    i18n();
     const preferences = ['anti-mistouch', 'startup-unload'];
     for (let preference of preferences) {
         const value = (await chrome.storage.sync.get([preference]))[preference];

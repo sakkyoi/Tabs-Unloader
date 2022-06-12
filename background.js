@@ -27,7 +27,7 @@ chrome.runtime.onStartup.addListener(async () => {
         chrome.contextMenus.create({ 'id': contextMenuItem, 'title': chrome.i18n.getMessage(contextMenuItem), 'contexts': [ 'page', 'action' ] });
     }
     chrome.contextMenus.create({ 'id': '_', 'type': 'separator', 'contexts': [ 'page', 'action' ] });
-    chrome.contextMenus.create({ 'id': '_preference', 'title': chrome.i18n.getMessage('preferenceButton'), 'contexts': [ 'page', 'action' ] });
+    chrome.contextMenus.create({ 'id': '_preference', 'title': chrome.i18n.getMessage('preference'), 'contexts': [ 'page', 'action' ] });
 })()
 
 // Listener for contextmenu

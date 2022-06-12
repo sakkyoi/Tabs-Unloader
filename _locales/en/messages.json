@@ -26,7 +26,40 @@
   "unloadAllFromThisWindow" : {
     "message": "Unload All Tabs From this Window"
   },
-  "preferenceButton": {
+  "preference": {
     "message": "Preference"
+  },
+  "about": {
+    "message": "About"
+  },
+  "antiMistouch": {
+    "message": "Anti Mistouch"
+  },
+  "antiMistouchCheckbox": {
+    "message": "Disallow quick access"
+  },
+  "antiMistouchDescription": {
+    "message": "若開啟此設定，直接點擊擴充元件圖標(一般情況在網址列右方) 將失去功能，你必須對圖標或是在頁面中點擊右鍵選擇卸載分頁的模式"
+  },
+  "startupUnload": {
+    "message": "啟動時自動卸載"
+  },
+  "startupUnloadCheckbox": {
+    "message": "開啟瀏覽器時將全部分頁卸載，避免不必要的資源浪費"
+  },
+  "startupUnloadDescription": {
+    "message": "若開啟此設定，瀏覽器將不會自動暫停閒置分頁，你必須手動利用本插件卸載分頁"
+  },
+  "language": {
+    "message": "語言"
+  },
+  "languageDescription": {
+    "message": "語言切換必須使用瀏覽器自身設定，詳情請參考"
+  },
+  "languageDescription2": {
+    "message": "How to set your browser's locale"
+  },
+  "languageListDescription": {
+    "message": "以下為支援之語言，如果你的系統語言不在列表中，將會使用預設語言，你亦可以加入翻譯行列："
   }
 }
