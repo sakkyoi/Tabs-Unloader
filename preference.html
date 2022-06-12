@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="lib/tocas.min.css">
+        <title>Preference</title>
+    </head>
+    <body>
+        <div class="ts-space is-huge"></div>
+        <div class="ts-container">
+
+            <div class="ts-grid is-relaxed">
+                <div class="column is-4-wide">
+                    <div class="ts-header is-center-aligned is-large is-heavy">分頁終結者</div>
+                    <div class="ts-space"></div>
+                    <div class="ts-box">
+                        <div class="ts-menu is-start-icon">
+                            <a class="item is-selected" href="./preference.html">偏好設定</a>
+                            <div class="ts-divider"></div>
+                            <a class="item" href="./about.html">關於</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-12-wide">
+                    <div class="ts-segment is-very-padded">
+                        <div class="ts-control">
+                            <div class="label">防誤觸</div>
+                            <div class="content is-padded">
+                                <label class="ts-switch">
+                                    <input type="checkbox" id="anti-mistouch">
+                                    禁用快捷功能
+                                </label>
+                                <div class="ts-text is-description">
+                                    若開啟此設定，直接點擊擴充元件圖標(一般情況在網址列右方) 將失去功能，你必須對圖標或是在頁面中點擊右鍵選擇卸載分頁的模式
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ts-space is-large"></div>
+                        <div class="ts-control">
+                            <div class="label">啟動時自動卸載</div>
+                            <div class="content is-padded">
+                                <label class="ts-switch">
+                                    <input type="checkbox" id="startup-unload">
+                                    開啟瀏覽器時將全部分頁卸載，避免不必要的資源浪費
+                                </label>
+                                <div class="ts-text is-description">
+                                    若開啟此設定，瀏覽器將不會自動暫停閒置分頁，你必須手動利用本插件卸載分頁
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ts-space is-large"></div>
+                        <div class="ts-divider"></div>
+                        <div class="ts-space is-large"></div>
+                        <div class="ts-control">
+                            <div class="label">語言</div>
+                            <div class="content is-padded">
+                                <div class="ts-input is-disabled">
+                                    <input type="text" placeholder="locale" id="locale">
+                                </div>
+                                <div class="ts-text is-description">
+                                    語言切換必須使用瀏覽器自身設定，詳情請參考 <a href="https://developer.chrome.com/docs/extensions/reference/i18n/#how-to-set-browsers-locale">How to set your browser's locale</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ts-space is-huge"></div>
+        <script src="preference.js"></script>
+    </body>
+</html>

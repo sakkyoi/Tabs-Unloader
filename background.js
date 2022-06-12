@@ -1,40 +1,28 @@
 import unloader from './lib/unloader.js';
 
 // On installed
-/*
-chrome.runtime.onInstalled.addListener((details) => {
-
+chrome.runtime.onInstalled.addListener(async (details) => {
     switch (details.reason) {
 
         case "install":
-            if (confirm(chrome.i18n.getMessage("onInstalled"))) {
-                //window.open("https://github.com/sakkyoi/Chrome-Tabs-Unloader");
-            } else {
-                // Nothing
-            }
             break;
         case "update":
-            if (chrome.runtime.getManifest().version !== details.previousVersion) {
-                if (confirm(chrome.i18n.getMessage("onUpdated"))) {
-                    //window.open("https://github.com/sakkyoi/Chrome-Tabs-Unloader");
-                } else {
-                    // Nothing
-                }
-            }
             break;
 
     }
 
 });
-*/
 
 // Initialization Contextmenu
-const contextMenuItems = ['unloadThis', 'unloadAllExceptThis', 'unloadAll', 'unloadAllFromThisWindowExceptThis', 'unloadAllFromThisWindow'];
-for (let contextMenuItem of contextMenuItems) {
-    chrome.contextMenus.create({ 'id': contextMenuItem, 'title': chrome.i18n.getMessage(contextMenuItem), 'contexts': [ 'page', 'action' ] });
-}
-chrome.contextMenus.create({ 'id': '_', 'type': 'separator', 'contexts': [ 'page', 'action' ] });
-chrome.contextMenus.create({ 'id': '_preference', 'title': chrome.i18n.getMessage('preferenceButton'), 'contexts': [ 'page', 'action' ] });
+(async () => {
+    await chrome.contextMenus.removeAll(); // avoid error
+    const contextMenuItems = ['unloadThis', 'unloadAllExceptThis', 'unloadAll', 'unloadAllFromThisWindowExceptThis', 'unloadAllFromThisWindow'];
+    for (let contextMenuItem of contextMenuItems) {
+        chrome.contextMenus.create({ 'id': contextMenuItem, 'title': chrome.i18n.getMessage(contextMenuItem), 'contexts': [ 'page', 'action' ] });
+    }
+    chrome.contextMenus.create({ 'id': '_', 'type': 'separator', 'contexts': [ 'page', 'action' ] });
+    chrome.contextMenus.create({ 'id': '_preference', 'title': chrome.i18n.getMessage('preferenceButton'), 'contexts': [ 'page', 'action' ] });
+})()
 
 // Listener for contextmenu
 chrome.contextMenus.onClicked.addListener(async (info, tab) => {
@@ -44,5 +32,5 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
 
 // Listener for action
 chrome.action.onClicked.addListener(async () => {
-    unloader('unloadThis');
+    if (!(await chrome.storage.sync.get(['anti-mistouch']))['anti-mistouch']) unloader('unloadThis');
 });
