@@ -3,13 +3,13 @@ const manifest = await chrome.runtime.getManifest();
 
 (async () => {
     i18n();
-    const preferences = ['anti-mistouch', 'startup-unload'];
+    const preferences = ['anti-mistouch', 'startup-unload', 'triditional-quick-access'];
     for (let preference of preferences) {
         const value = (await chrome.storage.sync.get([preference]))[preference];
         if (!(value === undefined || value === false)) {
             document.getElementById(preference).click();
         }
-        document.getElementById(preference).addEventListener('change', (ev) => {
+        document.getElementById(preference).addEventListener('change', async (ev) => {
             const preferenceObj = {};
             preferenceObj[preference] = ev.target.checked;
             chrome.storage.sync.set(preferenceObj);

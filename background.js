@@ -2,15 +2,49 @@ import unloader from './lib/unloader.js';
 
 // On installed
 chrome.runtime.onInstalled.addListener(async (details) => {
+    // triditional quick access (set status on extenxion install, update, reload...)
+    chrome.action.setPopup({ 'popup': (await chrome.storage.sync.get(['triditional-quick-access']))['triditional-quick-access'] ? 'popup.html' : '' });
     switch (details.reason) {
 
         case "install":
+            //chrome.tabs.create({ 'url': 'install-welcome-page' });
             break;
         case "update":
+            //chrome.tabs.create({ 'url': 'update-welcome-page' });
             break;
 
     }
 
+});
+
+// On startup
+chrome.runtime.onStartup.addListener(async () => {
+    // triditional quick access (set status on startup)
+    chrome.action.setPopup({ 'popup': (await chrome.storage.sync.get(['triditional-quick-access']))['triditional-quick-access'] ? 'popup.html' : '' });
+    // Startup unload
+    if (!(await chrome.storage.sync.get(['startup-unload']))['startup-unload']) return;
+    const tabs = await chrome.tabs.query({ highlighted: false });
+    for (let tab of tabs) {
+        chrome.tabs.discard(tab.id);
+    }
+});
+
+// On storage changed
+chrome.storage.onChanged.addListener(async () => {
+    // triditional quick access (set status on preference change)
+    chrome.action.setPopup({ 'popup': (await chrome.storage.sync.get(['triditional-quick-access']))['triditional-quick-access'] ? 'popup.html' : '' });
+});
+
+// On contextmenu clicked
+chrome.contextMenus.onClicked.addListener(async (info, tab) => {
+    unloader(info.menuItemId);
+    if (info.menuItemId === '_preference') chrome.tabs.create({ 'url': chrome.runtime.getURL('preference/preference.html') });
+});
+
+// on action clicked
+chrome.action.onClicked.addListener(async () => {
+    // anti mistouch
+    if (!(await chrome.storage.sync.get(['anti-mistouch']))['anti-mistouch']) unloader('unloadSelected');
 });
 
 // Initialization Contextmenu
@@ -23,24 +57,3 @@ chrome.runtime.onInstalled.addListener(async (details) => {
     chrome.contextMenus.create({ 'id': '_', 'type': 'separator', 'contexts': [ 'all' ] });
     chrome.contextMenus.create({ 'id': '_preference', 'title': chrome.i18n.getMessage('preference'), 'contexts': [ 'all' ] });
 })()
-
-// Listener for contextmenu
-chrome.contextMenus.onClicked.addListener(async (info, tab) => {
-    unloader(info.menuItemId);
-    if (info.menuItemId === '_preference') chrome.tabs.create({ 'url': `extension://${chrome.runtime.id}/preferences.html` });
-});
-
-// Listener for action
-chrome.action.onClicked.addListener(async () => {
-    // anti mistouch
-    if (!(await chrome.storage.sync.get(['anti-mistouch']))['anti-mistouch']) unloader('unloadThis');
-});
-
-// Startup unload
-chrome.runtime.onStartup.addListener(async () => {
-    if (!(await chrome.storage.sync.get(['startup-unload']))['startup-unload']) return;
-    const tabs = await chrome.tabs.query({ highlighted: false });
-    for (let tab of tabs) {
-        chrome.tabs.discard(tab.id);
-    }
-});

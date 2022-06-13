@@ -44,6 +44,15 @@
   "startupUnloadDescription": {
     "message": "Unload all tabs when browser startup, avoid waste of resources."
   },
+  "triditionalQuickAccess": {
+    "message": "Triditional Quick Access"
+  },
+  "triditionalQuickAccessCheckbox": {
+    "message": "Use old popup menu"
+  },
+  "triditionalQuickAccessDescription": {
+    "message": "Quick Access will not be \"unload selected tab(s)\", will be a popup menu."
+  },
   "language": {
     "message": "Language"
   },
