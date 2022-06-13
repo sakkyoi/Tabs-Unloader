@@ -1,70 +1,82 @@
-![Logo](https://github.com/sakkyoi/Chrome-Tabs-Unloader/raw/master/asset/icon/banner.png)
-# Tab Unloader 2.0
+![logo](asset/icon/banner.png)
 
-# Still working on it, not yet finished.
+# Tabs Unloader 2.0
 
-An extension which stops Chrome from eating all of your memory.
+An extension recapture your own memory from browser.
 
-  - No tab closing. Just unload it from memory.
-  - No complicated operation. Right click or tool bar.
-  - No more memory waste. Save memory in one click.
+## Download from extension store
 
-## How to install
+[![chrome](asset/icon/google_badge.png)](https://developer.chrome.com/docs/webstore/branding/) [![edge](asset/icon/microsoft_badge.png)](https://microsoftedge.microsoft.com/addons/detail/cnefkmeedalkkciknnilnnfjponcbchh)
 
-  1. Open the Extension Management page by navigating to [chrome://extensions](chrome://extensions).
-  2. The Extension Management page can also be opened by clicking on the Chrome menu, hovering over More Tools then selecting Extensions.
-  3. Enable Developer Mode by clicking the toggle switch next to Developer mode.
-  4. Click the "LOAD UNPACKED" button and select the extension directory.
-  5. Detail in [https://developer.chrome.com/extensions/getstarted#manifest](https://developer.chrome.com/extensions/getstarted#manifest)
-  6. Or Chrome Web Store......Coming Soon!
-  7. Also available in [Microsoft Edge Add-Ons Store](https://microsoftedge.microsoft.com/addons/detail/cnefkmeedalkkciknnilnnfjponcbchh)
+## Features
 
-## How to use
+- No tab disappearing. Just unload it.
+- Simple to use. Just click your mouse.
+- No more memory waste. Recapture your own memory.
 
-  1. There are two ways you can unload your tabs. One is by right click. The other is by the tool box in the top.
-  ![step1](https://github.com/sakkyoi/Chrome-Tabs-Unloader/raw/master/asset/readme/right-click.png)
-  ![step1](https://github.com/sakkyoi/Chrome-Tabs-Unloader/raw/master/asset/readme/toolbox.png)
-  2. There are six mode you can unload your tabs.
-  
-  |Mode|Description|
-  |:---------------------------------------------|:-----------------------------------------------------------------|
-  |Unload This Tab|Unload current Tab(Just by right click.)|
-  |Unload This Tab or Selected Tabs|Unload current Tab or Selected Tabs(Just by tool box.)|
-  |Unload All Tabs Except This|Unload all tabs you opened except current tab.|
-  |Unload All Tabs|Unload all tabs you opened.|
-  |Unload All Tabs From this Window Except This|Unload all tabs you opened from current window except current tab.|
-  |Unload All Tabs From this Window|Unload all tabs you opened from current window.|
+## New in 2.0
 
-# 分頁終結者
+- Brand new operating procedure
+- Anti mistouch
+- Startup unloader
+- Performance improve
 
-終結分頁，節省記憶！
+## Installation
 
-  - 不會關閉分頁！就只是將分頁從記憶體上載卸。
-  - 不需複雜操作！只要按右鍵或是點開工具箱即可完成。
-  - 不再浪費記憶體！一鍵節省記憶體使用量。
+Guide for *load an unpacked extension* from [*chrome developers docs*](https://developer.chrome.com/docs/extensions/mv3/getstarted/#unpacked):
+#### 1. Open the Extension Management page by navigating to `chrome://extensions`.
+- Alternatively, open this page by clicking on the Extensions menu button and selecting *Manage Extensions* at the bottom of the menu.
+- Alternatively, open this page by clicking on the Chrome menu, hovering over *More Tools* then selecting *Extensions*
+#### 2. Enable Developer Mode by clicking the toggle switch next to *Developer mode*.
+#### 3. Click the *Load unpacked* button and select the extension directory.
+Ta-da! The extension has been successfully installed. Because no icons were included in the manifest, a generic icon will be created for the extension.
 
-## 如何安裝
+OR, you can just [download from extension store](#download-from-extension-store)
 
-  1. 輸入網址 [chrome://extensions](chrome://extensions) 打開擴充功能管理頁面。
-  2. 擴充功能管理頁面也可以透過 Chrome 選單的更多工具中的擴充功能進入。
-  3. 將開發人員模式打開（右上角）。
-  4. 點擊「載入未封裝項目」，並選擇插件所在目錄。
-  5. 更多內容可以前往 [https://developer.chrome.com/extensions/getstarted#manifest](https://developer.chrome.com/extensions/getstarted#manifest) 查看。
-  6. 或是前往 Chrome 線上應用程式商店安裝......準備中！
-  7. 也可以至 (Microsoft Edge Add-Ons Store)(https://microsoftedge.microsoft.com/addons/detail/cnefkmeedalkkciknnilnnfjponcbchh) 下載
+## Usage
+#### You can unload your tabs from:
+- context menu on pages
+- context menu on quick access button (new operating procedure)
+- directly clicking on quick access button (new operating procedure)
 
-## 如何使用
+> Quick access button is the extension icon usually on the left of address bar
 
-  1. 有兩中方式可以終結分頁。一種是透過右鍵選單，另一種是在視窗頂部的工具箱。
-  ![step1](https://github.com/sakkyoi/Chrome-Tabs-Unloader/raw/master/asset/readme/right-click.png)
-  ![step1](https://github.com/sakkyoi/Chrome-Tabs-Unloader/raw/master/asset/readme/toolbox.png)
-  2. 有六種終結分頁的模式。
-  
-  |模式|說明|
-  |:---------------------------------------------|:-----------------------------------------------------------------|
-  |終結此分頁|將目前分頁載卸（只能透過右鍵選單）|
-  |終結這個分頁或被選中的分頁|將目前分頁或是被選中的分頁載卸（只能透過工具箱）|
-  |終結除了這個這個以外的分頁|將除了目前分頁以外的所有開啟中分頁載卸|
-  |終結所有分頁|將所有開啟中分頁載卸|
-  |終結這個視窗中除了這個以外的分頁|將目前視窗中除了目前分頁以外的所有開啟中分頁載卸|
-  |終結這個視窗中所有分頁|將目前視窗中所有開啟中分頁載卸|
+> Quick access button will be "Unload selected tab(s)" when directly clicking on it in generally
+
+> Quick access button can set to the popup menu from old version
+
+#### There are five mode to unload: (different from old version)
+
+| Mode | Description |
+| :--- | :---------- |
+| Unload Selected Tab(s) | Unload selected tabs contain current tab |
+| Unload All Except Selected Tab | Unload all of the tabs you opened but not contain selected tabs |
+| Unload All Tabs | Unload all of the tabs you opened |
+| Unload All from This Window Except Selected Tab | Unload all of the tabs you opened from current window but not contain selected tabs |
+| Unload All Tabs from This Window | Unload all of the tabs you opened from current window |
+
+#### Description of preference options:
+
+| Option | Description |
+| :----- | :---------- |
+| Anti Mistouch | Disallow quick access to disable directly clicking on quick access button |
+| Startup Unload | Auto unload all tabs when browser startup to avoid waste of resources |
+| Triditional Quick Access | Directly clicking on quick access button will not be "unload selected tab(s)", it will be a popup menu from old version |
+
+## Gallery
+
+- Context menu on pages
+
+![context-pages](asset/readme/context-menu.png)
+
+- Context menu on quick access button
+
+![context-quick-access](asset/readme/quick-access-new.png)
+
+- Popup menu in triditional quick access button
+
+![context-quick-access](asset/readme/quick-access-triditional.png)
+
+- Preference page
+
+![preference](asset/readme/preference.png)
