@@ -6,7 +6,7 @@ An extension recapture your own memory from browser.
 
 ## Download from extension store
 
-[![chrome](asset/icon/google_badge.png)](https://developer.chrome.com/docs/webstore/branding/) [![edge](asset/icon/microsoft_badge.png)](https://microsoftedge.microsoft.com/addons/detail/cnefkmeedalkkciknnilnnfjponcbchh)
+[![chrome](asset/icon/google_badge.png)](https://chrome.google.com/webstore/detail/jageegmimlcfoomhknbhbmbjacmglnlb) [![edge](asset/icon/microsoft_badge.png)](https://microsoftedge.microsoft.com/addons/detail/cnefkmeedalkkciknnilnnfjponcbchh)
 
 ## Features
 
