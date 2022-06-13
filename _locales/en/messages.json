@@ -54,7 +54,7 @@
     "message": "How to set your browser's locale"
   },
   "languageListDescription": {
-    "message": "The following list is supported languages. When your language is not on the supported list, it will use the default language."
+    "message": "The following list is supported languages. When your language is not supported yet, extension will use the default language."
   },
   "languageListDescription2": {
     "message": "You also can join the translation team."

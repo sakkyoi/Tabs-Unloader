@@ -13,12 +13,6 @@ chrome.runtime.onInstalled.addListener(async (details) => {
 
 });
 
-// On startup
-chrome.runtime.onStartup.addListener(async () => {
-    // startup unload
-    if (!(await chrome.storage.sync.get(['startup-unload']))['startup-unload']) unloader('unloadAll');
-});
-
 // Initialization Contextmenu
 (async () => {
     await chrome.contextMenus.removeAll(); // avoid error
@@ -40,4 +34,12 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
 chrome.action.onClicked.addListener(async () => {
     // anti mistouch
     if (!(await chrome.storage.sync.get(['anti-mistouch']))['anti-mistouch']) unloader('unloadThis');
+});
+
+// Startup unload
+chrome.tabs.onUpdated.addListener(async (tabId, info) => {
+    try {
+        const tab = await chrome.tabs.get(tabId);
+        if (!tab.active && !tab.discarded && info.status === 'loading' && (await chrome.storage.sync.get(['startup-unload']))['startup-unload']) chrome.tabs.discard(tabId);
+    } catch {}
 });
