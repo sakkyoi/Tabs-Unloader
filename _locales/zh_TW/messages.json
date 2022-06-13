@@ -70,5 +70,8 @@
   },
   "userGuide": {
     "message": "操作指南"
+  },
+  "bugReport": {
+    "message": "回報錯誤"
   }
 }
