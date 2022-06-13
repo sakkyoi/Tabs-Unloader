@@ -18,10 +18,10 @@ chrome.runtime.onInstalled.addListener(async (details) => {
     await chrome.contextMenus.removeAll(); // avoid error
     const contextMenuItems = ['unloadSelected', 'unloadAllExceptSelected', 'unloadAll', 'unloadAllFromThisWindowExceptSelected', 'unloadAllFromThisWindow'];
     for (let contextMenuItem of contextMenuItems) {
-        chrome.contextMenus.create({ 'id': contextMenuItem, 'title': chrome.i18n.getMessage(contextMenuItem), 'contexts': [ 'page', 'action' ] });
+        chrome.contextMenus.create({ 'id': contextMenuItem, 'title': chrome.i18n.getMessage(contextMenuItem), 'contexts': [ 'all' ] });
     }
-    chrome.contextMenus.create({ 'id': '_', 'type': 'separator', 'contexts': [ 'page', 'action' ] });
-    chrome.contextMenus.create({ 'id': '_preference', 'title': chrome.i18n.getMessage('preference'), 'contexts': [ 'page', 'action' ] });
+    chrome.contextMenus.create({ 'id': '_', 'type': 'separator', 'contexts': [ 'all' ] });
+    chrome.contextMenus.create({ 'id': '_preference', 'title': chrome.i18n.getMessage('preference'), 'contexts': [ 'all' ] });
 })()
 
 // Listener for contextmenu

@@ -59,6 +59,9 @@
   "languageListDescription2": {
     "message": "你亦可以加入翻譯行列"
   },
+  "extensionName": {
+    "message": "擴充元件名稱"
+  },
   "extensionVersion": {
     "message": "擴充元件版本"
   },

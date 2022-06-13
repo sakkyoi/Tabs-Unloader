@@ -59,19 +59,22 @@
   "languageListDescription2": {
     "message": "You can also join the translation team."
   },
+  "extensionName": {
+    "message": "Extension Name"
+  },
   "extensionVersion": {
-    "message": "Extension version"
+    "message": "Extension Version"
   },
   "localization": {
     "message": "Localization"
   },
   "openSource": {
-    "message": "Open source"
+    "message": "Open Source"
   },
   "userGuide": {
-    "message": "User guide"
+    "message": "User Guide"
   },
   "bugReport": {
-    "message": "Bug report"
+    "message": "Bug Report"
   }
 }
