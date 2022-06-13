@@ -22,7 +22,7 @@ chrome.runtime.onStartup.addListener(async () => {
 // Initialization Contextmenu
 (async () => {
     await chrome.contextMenus.removeAll(); // avoid error
-    const contextMenuItems = ['unloadThis', 'unloadAllExceptThis', 'unloadAll', 'unloadAllFromThisWindowExceptThis', 'unloadAllFromThisWindow'];
+    const contextMenuItems = ['unloadSelected', 'unloadAllExceptSelected', 'unloadAll', 'unloadAllFromThisWindowExceptSelected', 'unloadAllFromThisWindow'];
     for (let contextMenuItem of contextMenuItems) {
         chrome.contextMenus.create({ 'id': contextMenuItem, 'title': chrome.i18n.getMessage(contextMenuItem), 'contexts': [ 'page', 'action' ] });
     }

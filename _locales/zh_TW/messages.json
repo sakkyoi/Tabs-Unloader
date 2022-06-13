@@ -2,29 +2,23 @@
   "appName": {
     "message": "分頁終結者"
   },
-  "onInstalled": {
-    "message": "感謝安裝分頁終結者，第一次使用的話，敬請前往Github查看使用教學。"
-  },
-  "onUpdated": {
-    "message": "感謝更新分頁終結者，敬請前往Github查看更新內容。"
-  },
   "appDescription": {
     "message": "終結分頁，節省記憶！"
   },
-  "unloadThis" : {
-    "message": "卸載目前及被選中的分頁"
+  "unloadSelected" : {
+    "message": "卸載選中的分頁"
   },
-  "unloadAllExceptThis" : {
+  "unloadAllExceptSelected" : {
     "message": "卸載其他分頁"
   },
   "unloadAll" : {
-    "message": "終結所有分頁"
+    "message": "卸載所有分頁"
   },
-  "unloadAllFromThisWindowExceptThis" : {
-    "message": "終結目前視窗中其他分頁"
+  "unloadAllFromThisWindowExceptSelected" : {
+    "message": "卸載目前視窗中其他分頁"
   },
   "unloadAllFromThisWindow" : {
-    "message": "終結目前視窗中所有分頁"
+    "message": "卸載目前視窗中所有分頁"
   },
   "preference": {
     "message": "偏好設定"
@@ -60,6 +54,9 @@
     "message": "如何設定你的瀏覽器語言"
   },
   "languageListDescription": {
-    "message": "以下為支援之語言，如果你的系統語言不在列表中，將會使用預設語言，你亦可以加入翻譯行列："
+    "message": "以下為支援之語言，如果你的系統語言不在列表中，將會使用預設語言。"
+  },
+  "languageListDescription2": {
+    "message": "你亦可以加入翻譯行列"
   }
 }

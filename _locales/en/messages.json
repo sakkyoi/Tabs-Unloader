@@ -2,29 +2,23 @@
   "appName": {
     "message": "Tabs Unloader"
   },
-  "onInstalled": {
-    "message": "Thanks for choosing Chrome Tabs Unloader. If you are new for Chrome Tabs Unloader, please see the user guide on Github."
-  },
-  "onUpdated": {
-    "message": "Thanks for updating Chrome Tabs Unloader. Please see what's new in new version on Github."
-  },
   "appDescription": {
-    "message": "An extension which stops Chrome from eating all of your memory."
+    "message": "An extension recapture your own memory from browser."
   },
-  "unloadThis" : {
-    "message": "Unload This or Selected Tab(s)"
+  "unloadSelected" : {
+    "message": "Unload Selected Tab(s)"
   },
-  "unloadAllExceptThis" : {
-    "message": "Unload All Tabs Except This"
+  "unloadAllExceptSelected" : {
+    "message": "Unload All Except Selected Tab"
   },
   "unloadAll" : {
     "message": "Unload All Tabs"
   },
-  "unloadAllFromThisWindowExceptThis" : {
-    "message": "Unload All Tabs From this Window Except This"
+  "unloadAllFromThisWindowExceptSelected" : {
+    "message": "Unload All from This Window Except Selected Tab"
   },
   "unloadAllFromThisWindow" : {
-    "message": "Unload All Tabs From this Window"
+    "message": "Unload All Tabs from This Window"
   },
   "preference": {
     "message": "Preference"
@@ -39,27 +33,30 @@
     "message": "Disallow quick access"
   },
   "antiMistouchDescription": {
-    "message": "若開啟此設定，直接點擊擴充元件圖標(一般情況在網址列右方) 將失去功能，你必須對圖標或是在頁面中點擊右鍵選擇卸載分頁的模式"
+    "message": "When this is on, clicking on the extension icon(usually on the right of address bar) will be disabled. You must right click on the icon or pages to unload tabs."
   },
   "startupUnload": {
-    "message": "啟動時自動卸載"
+    "message": "Startup Unload"
   },
   "startupUnloadCheckbox": {
-    "message": "開啟瀏覽器時將全部分頁卸載，避免不必要的資源浪費"
+    "message": "Auto unload all tabs when startup"
   },
   "startupUnloadDescription": {
-    "message": "若開啟此設定，瀏覽器將不會自動暫停閒置分頁，你必須手動利用本插件卸載分頁"
+    "message": "Unload all tabs when browser startup, avoid waste of resources."
   },
   "language": {
-    "message": "語言"
+    "message": "Language"
   },
   "languageDescription": {
-    "message": "語言切換必須使用瀏覽器自身設定，詳情請參考"
+    "message": "Setting of language must through browser preference, please refer to"
   },
   "languageDescription2": {
     "message": "How to set your browser's locale"
   },
   "languageListDescription": {
-    "message": "以下為支援之語言，如果你的系統語言不在列表中，將會使用預設語言，你亦可以加入翻譯行列："
+    "message": "The following list is supported languages. When your language is not on the supported list, it will use the default language."
+  },
+  "languageListDescription2": {
+    "message": "You also can join the translation team."
   }
 }
