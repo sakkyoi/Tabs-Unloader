@@ -41,7 +41,7 @@ OR, you can just [download from extension store](#download-from-extension-store)
 
 > Quick access button is the extension icon usually on the left of address bar
 
-> Quick access button will be "Unload selected tab(s)" when directly clicking on it in generally
+> Quick access button will be "unload selected tab(s)" when directly clicking on it in generally
 
 > Quick access button can set to the popup menu from old version
 
