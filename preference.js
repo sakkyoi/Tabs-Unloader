@@ -1,4 +1,5 @@
 import i18n from "./lib/i18nHtml.js";
+const manifest = await chrome.runtime.getManifest();
 
 (async () => {
     i18n();
@@ -14,6 +15,6 @@ import i18n from "./lib/i18nHtml.js";
             chrome.storage.sync.set(preferenceObj);
         });
     }
-    document.getElementById('locale').value = await chrome.i18n.getUILanguage();
+    document.getElementById('locale').value = (await chrome.i18n.getAcceptLanguages()).includes(await chrome.i18n.getUILanguage()) ? await chrome.i18n.getUILanguage() : manifest.default_locale;
     document.getElementById('available-locale').textContent = (await chrome.i18n.getAcceptLanguages()).join(', ');
 })()

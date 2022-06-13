@@ -58,5 +58,14 @@
   },
   "languageListDescription2": {
     "message": "你亦可以加入翻譯行列"
+  },
+  "extensionVersion": {
+    "message": "擴充元件版本"
+  },
+  "localization": {
+    "message": "在地化"
+  },
+  "openSource": {
+    "message": "開放原始碼"
   }
 }

@@ -58,5 +58,14 @@
   },
   "languageListDescription2": {
     "message": "You also can join the translation team."
+  },
+  "extensionVersion": {
+    "message": "Extension version"
+  },
+  "localization": {
+    "message": "Localization"
+  },
+  "openSource": {
+    "message": "Open source"
   }
 }
