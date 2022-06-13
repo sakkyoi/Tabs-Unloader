@@ -37,9 +37,10 @@ chrome.action.onClicked.addListener(async () => {
 });
 
 // Startup unload
-chrome.tabs.onUpdated.addListener(async (tabId, info) => {
-    try {
-        const tab = await chrome.tabs.get(tabId);
-        if (!tab.active && !tab.discarded && info.status === 'loading' && (await chrome.storage.sync.get(['startup-unload']))['startup-unload']) chrome.tabs.discard(tabId);
-    } catch {}
+chrome.runtime.onStartup.addListener(async () => {
+    if (!(await chrome.storage.sync.get(['startup-unload']))['startup-unload']) return;
+    const tabs = await chrome.tabs.query({ highlighted: false });
+    for (let tab of tabs) {
+        chrome.tabs.discard(tab.id);
+    }
 });
