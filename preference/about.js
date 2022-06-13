@@ -1,4 +1,4 @@
-import i18n from "./lib/i18nHtml.js";
+import i18n from "../lib/i18nHtml.js";
 const manifest = await chrome.runtime.getManifest();
 
 (async () => {

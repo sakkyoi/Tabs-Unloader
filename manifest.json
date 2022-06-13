@@ -17,7 +17,7 @@
     "default_icon": "asset/icon/icon_128.png",
     "default_title": "__MSG_appName__"
   },
-  "options_page": "preference.html",
+  "options_page": "preference/preference.html",
   "permissions": [
     "contextMenus",
     "tabs",

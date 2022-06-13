@@ -67,5 +67,8 @@
   },
   "openSource": {
     "message": "Open source"
+  },
+  "userGuide": {
+    "message": "User guide"
   }
 }

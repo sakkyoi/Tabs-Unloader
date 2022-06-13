@@ -67,5 +67,8 @@
   },
   "openSource": {
     "message": "開放原始碼"
+  },
+  "userGuide": {
+    "message": "操作指南"
   }
 }
