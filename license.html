@@ -51,6 +51,8 @@
         <script>
             (async () => {
                 const license = await (await fetch('license.txt')).text();
+                license.replace(' ', '&nbsp;');
+                license.replace('\n', '<br>');
                 document.getElementById('license').innerHTML = license;
             })();
         </script>
