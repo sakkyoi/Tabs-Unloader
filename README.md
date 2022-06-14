@@ -4,6 +4,7 @@
 
 An extension recapture your own memory from browser.
 
+## [Documentation](https://sakkyoi.github.io/Tabs-Unloader/guide.html)
 ## Download from extension store
 
 [![chrome](asset/icon/google_badge.png)](https://chrome.google.com/webstore/detail/jageegmimlcfoomhknbhbmbjacmglnlb) [![edge](asset/icon/microsoft_badge.png)](https://microsoftedge.microsoft.com/addons/detail/cnefkmeedalkkciknnilnnfjponcbchh)
