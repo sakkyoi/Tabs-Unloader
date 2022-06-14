@@ -50,7 +50,7 @@
         </div>
         <script>
             (async () => {
-                const license = (await fetch('license.txt')).text();
+                const license = await (await fetch('license.txt')).text();
                 document.getElementById('license').textContent = license;
             })();
         </script>
