@@ -1,37 +1,80 @@
-## Welcome to GitHub Pages
+# Tabs Unloader 2.0
 
-You can use the [editor on GitHub](https://github.com/sakkyoi/Tabs-Unloader/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+An extension recapture your own memory from browser.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Download from extension store
 
-### Markdown
+[![chrome](asset/icon/google_badge.png)](https://chrome.google.com/webstore/detail/jageegmimlcfoomhknbhbmbjacmglnlb) [![edge](asset/icon/microsoft_badge.png)](https://microsoftedge.microsoft.com/addons/detail/cnefkmeedalkkciknnilnnfjponcbchh)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Features
 
-```markdown
-Syntax highlighted code block
+- No tab disappearing. Just unload it.
+- Simple to use. Just click your mouse.
+- No more memory waste. Recapture your own memory.
 
-# Header 1
-## Header 2
-### Header 3
+## New in 2.0
 
-- Bulleted
-- List
+- Brand new operating procedure
+- Anti mistouch
+- Startup unloader
+- Performance improve
 
-1. Numbered
-2. List
+## Installation
 
-**Bold** and _Italic_ and `Code` text
+Guide for *load an unpacked extension* from [*chrome developers docs*](https://developer.chrome.com/docs/extensions/mv3/getstarted/#unpacked):
+#### 1. Open the Extension Management page by navigating to `chrome://extensions`.
+- Alternatively, open this page by clicking on the Extensions menu button and selecting *Manage Extensions* at the bottom of the menu.
+- Alternatively, open this page by clicking on the Chrome menu, hovering over *More Tools* then selecting *Extensions*
+#### 2. Enable Developer Mode by clicking the toggle switch next to *Developer mode*.
+#### 3. Click the *Load unpacked* button and select the extension directory.
+Ta-da! The extension has been successfully installed. Because no icons were included in the manifest, a generic icon will be created for the extension.
 
-[Link](url) and ![Image](src)
-```
+OR, you can just [download from extension store](#download-from-extension-store)
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+## Usage
+#### You can unload your tabs from:
+- context menu on pages
+- context menu on quick access button (new operating procedure)
+- directly clicking on quick access button (new operating procedure)
 
-### Jekyll Themes
+> Quick access button is the extension icon usually on the left of address bar
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sakkyoi/Tabs-Unloader/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+> Quick access button will be "unload selected tab(s)" when directly clicking on it in generally
 
-### Support or Contact
+> Quick access button can set to the popup menu from old version
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+#### There are five mode to unload: (different from old version)
+
+| Mode | Description |
+| :--- | :---------- |
+| Unload Selected Tab(s) | Unload selected tabs contain current tab |
+| Unload All Except Selected Tab | Unload all of the tabs you opened but not contain selected tabs |
+| Unload All Tabs | Unload all of the tabs you opened |
+| Unload All from This Window Except Selected Tab | Unload all of the tabs you opened from current window but not contain selected tabs |
+| Unload All Tabs from This Window | Unload all of the tabs you opened from current window |
+
+#### Description of preference options:
+
+| Option | Description |
+| :----- | :---------- |
+| Anti Mistouch | Disallow quick access to disable directly clicking on quick access button |
+| Startup Unload | Auto unload all tabs when browser startup to avoid waste of resources |
+| Triditional Quick Access | Directly clicking on quick access button will not be "unload selected tab(s)", it will be a popup menu from old version |
+
+## Gallery
+
+- Context menu on pages
+
+![context-pages](asset/readme/context-menu.png)
+
+- Context menu on quick access button
+
+![context-quick-access](asset/readme/quick-access-new.png)
+
+- Popup menu in triditional quick access button
+
+![context-quick-access](asset/readme/quick-access-triditional.png)
+
+- Preference page
+
+![preference](asset/readme/preference.png)
