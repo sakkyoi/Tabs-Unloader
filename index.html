@@ -13,11 +13,18 @@
         <div class="ts-content is-secondary">
             <div class="ts-container">
                 <div class="ts-row">
-                    <div class="column is-fluid">
+                    <div class="column is-fluid is-not-minimal">
                         <div class="ts-tab">
                             <a href="https://sakkyoi.github.io/Tabs-Unloader/" class="item">Tabs Unloader</a>
                             <a href="welcome.html" class="item">Welcome</a>
                             <a href="guide.html" class="item">User Guide</a>
+                        </div>
+                    </div>
+                    <div class="column is-fluid is-minimal-only">
+                        <div class="ts-tab">
+                            <a class="item" onclick="document.getElementById('mobile-menu').classList.add('is-visible');">
+                                <span class="ts-icon is-bars-icon"></span>
+                            </a>
                         </div>
                     </div>
                     <div class="column">
@@ -27,6 +34,25 @@
                             </div>
                             <a href="https://github.com/sakkyoi/Tabs-Unloader" class="item" target="_blank"><span class="ts-icon is-github-icon"></span> Github</a>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ts-modal" id="mobile-menu">
+            <div class="content">
+                <div class="ts-content is-dense">
+                    <div class="ts-row">
+                        <div class="column is-fluid"></div>
+                        <div class="column">
+                            <button class="ts-close" onclick="document.getElementById('mobile-menu').classList.remove('is-visible');"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="ts-content">
+                    <div class="ts-menu is-separated">
+                        <a href="https://sakkyoi.github.io/Tabs-Unloader/" class="item">Tabs Unloader</a>
+                        <a href="welcome.html" class="item">Welcome</a>
+                        <a href="guide.html" class="item">User Guide</a>
                     </div>
                 </div>
             </div>
@@ -55,7 +81,7 @@
         <div class="ts-divider"></div>
         <div class="ts-space is-big"></div>
         <div class="ts-container">
-            <div class="ts-grid is-relaxed is-3-columns">
+            <div class="ts-grid is-relaxed is-3-columns is-stackable">
                 <div class="column">
                     <div class="ts-header is-big">No tab disappearing</div>
                     <span class="ts-text">Just unload it from memory. You can reload it anytime if you want.</span>
