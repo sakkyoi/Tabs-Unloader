@@ -45,7 +45,7 @@ OR, you can just [download from extension store](#download-from-extension-store)
 
 > Quick access button can set to the popup menu from old version
 
-#### There are five mode to unload: (different from old version)
+#### There are five modes to unload: (different from old version)
 
 | Mode | Description |
 | :--- | :---------- |
