@@ -1,0 +1,92 @@
+{
+  "appName": {
+    "message": "分页终结者"
+  },
+  "appDescription": {
+    "message": "终结分页，节省记忆！"
+  },
+  "unloadSelected" : {
+    "message": "卸载选中的分页"
+  },
+  "unloadAllExceptSelected" : {
+    "message": "卸载其他分页"
+  },
+  "unloadAll" : {
+    "message": "卸载所有分页"
+  },
+  "unloadAllFromThisWindowExceptSelected" : {
+    "message": "卸载目前窗口中其他分页"
+  },
+  "unloadAllFromThisWindow" : {
+    "message": "卸载目前窗口中所有分页"
+  },
+  "preference": {
+    "message": "偏好设定"
+  },
+  "about": {
+    "message": "关于"
+  },
+  "guide": {
+    "message": "用户指南"
+  },
+  "antiMistouch": {
+    "message": "防误触"
+  },
+  "antiMistouchCheckbox": {
+    "message": "禁用快捷功能"
+  },
+  "antiMistouchDescription": {
+    "message": "若开启此设定，直接点击扩充组件图标(一般情况在网址列右方) 将失去功能，你必须对图标或是在页面点击右键执行分页卸载"
+  },
+  "startupUnload": {
+    "message": "启动时卸载"
+  },
+  "startupUnloadCheckbox": {
+    "message": "启动时自动卸载分页"
+  },
+  "startupUnloadDescription": {
+    "message": "当浏览器启动时全部分页将被自动卸载直至开启他，避免不必要的资源浪费"
+  },
+  "traditionalQuickAccess": {
+    "message": "旧版快捷功能"
+  },
+  "traditionalQuickAccessCheckbox": {
+    "message": "使用旧版弹出式选单"
+  },
+  "traditionalQuickAccessDescription": {
+    "message": "快捷存取将不会是「卸载选中的窗口」，将使用旧版的弹出式选单"
+  },
+  "language": {
+    "message": "语言"
+  },
+  "languageDescription": {
+    "message": "语言切换须透过浏览器设定，详情请参考"
+  },
+  "languageDescription2": {
+    "message": "如何设定你的浏览器语言"
+  },
+  "languageListDescription": {
+    "message": "以下为支持之语言，如果你的系统语言不在列表中，将会使用默认语言。"
+  },
+  "languageListDescription2": {
+    "message": "你亦可以加入翻译行列"
+  },
+  "extensionName": {
+    "message": "扩充组件名称"
+  },
+  "extensionVersion": {
+    "message": "扩充组件版本"
+  },
+  "localization": {
+    "message": "在地化"
+  },
+  "openSource": {
+    "message": "开放原始码"
+  },
+  "userGuide": {
+    "message": "操作指南"
+  },
+  "bugReport": {
+    "message": "回报错误"
+  }
+}
