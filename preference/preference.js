@@ -16,5 +16,4 @@ const manifest = await chrome.runtime.getManifest();
         });
     }
     document.getElementById('locale').value = (await chrome.i18n.getAcceptLanguages()).includes(await chrome.i18n.getUILanguage()) ? await chrome.i18n.getUILanguage() : manifest.default_locale;
-    document.getElementById('available-locale').textContent = (await chrome.i18n.getAcceptLanguages()).join(', ');
 })()

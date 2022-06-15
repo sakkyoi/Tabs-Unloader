@@ -69,7 +69,7 @@
     "message": "The following list is supported languages. When your language is not supported yet, extension will use the default language."
   },
   "languageListDescription2": {
-    "message": "You can also join the translation team."
+    "message": "You can be part of our localization community."
   },
   "extensionName": {
     "message": "Extension Name"
