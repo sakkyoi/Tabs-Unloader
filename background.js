@@ -7,10 +7,10 @@ chrome.runtime.onInstalled.addListener(async (details) => {
     switch (details.reason) {
 
         case "install":
-            //chrome.tabs.create({ 'url': 'install-welcome-page' });
+            chrome.tabs.create({ 'url': 'https://sakkyoi.github.io/Tabs-Unloader/welcome.html' });
             break;
         case "update":
-            //chrome.tabs.create({ 'url': 'update-welcome-page' });
+            chrome.tabs.create({ 'url': 'https://sakkyoi.github.io/Tabs-Unloader/welcome.html' });
             break;
 
     }

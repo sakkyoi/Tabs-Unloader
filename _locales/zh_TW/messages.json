@@ -26,6 +26,9 @@
   "about": {
     "message": "關於"
   },
+  "guide": {
+    "message": "用戶指南"
+  },
   "antiMistouch": {
     "message": "防誤觸"
   },

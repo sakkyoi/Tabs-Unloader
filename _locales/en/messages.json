@@ -26,6 +26,9 @@
   "about": {
     "message": "About"
   },
+  "guide": {
+    "message": "User Guide"
+  },
   "antiMistouch": {
     "message": "Anti Mistouch"
   },
