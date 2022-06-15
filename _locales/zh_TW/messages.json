@@ -47,13 +47,13 @@
   "startupUnloadDescription": {
     "message": "當瀏覽器啟動時全部分頁將被自動卸載直至開啟他，避免不必要的資源浪費"
   },
-  "triditionalQuickAccess": {
+  "traditionalQuickAccess": {
     "message": "舊版快捷功能"
   },
-  "triditionalQuickAccessCheckbox": {
+  "traditionalQuickAccessCheckbox": {
     "message": "使用舊版彈出式選單"
   },
-  "triditionalQuickAccessDescription": {
+  "traditionalQuickAccessDescription": {
     "message": "快捷存取將不會是「卸載選中的視窗」，將使用舊版的彈出式選單"
   },
   "language": {

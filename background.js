@@ -2,8 +2,8 @@ import unloader from './lib/unloader.js';
 
 // On installed
 chrome.runtime.onInstalled.addListener(async (details) => {
-    // triditional quick access (set status on extenxion install, update, reload...)
-    chrome.action.setPopup({ 'popup': (await chrome.storage.sync.get(['triditional-quick-access']))['triditional-quick-access'] ? 'popup.html' : '' });
+    // traditional quick access (set status on extenxion install, update, reload...)
+    chrome.action.setPopup({ 'popup': (await chrome.storage.sync.get(['traditional-quick-access']))['traditional-quick-access'] ? 'popup.html' : '' });
     switch (details.reason) {
 
         case "install":
@@ -19,8 +19,8 @@ chrome.runtime.onInstalled.addListener(async (details) => {
 
 // On startup
 chrome.runtime.onStartup.addListener(async () => {
-    // triditional quick access (set status on startup)
-    chrome.action.setPopup({ 'popup': (await chrome.storage.sync.get(['triditional-quick-access']))['triditional-quick-access'] ? 'popup.html' : '' });
+    // traditional quick access (set status on startup)
+    chrome.action.setPopup({ 'popup': (await chrome.storage.sync.get(['traditional-quick-access']))['traditional-quick-access'] ? 'popup.html' : '' });
     // Startup unload
     if (!(await chrome.storage.sync.get(['startup-unload']))['startup-unload']) return;
     const tabs = await chrome.tabs.query({ highlighted: false });
@@ -31,8 +31,8 @@ chrome.runtime.onStartup.addListener(async () => {
 
 // On storage changed
 chrome.storage.onChanged.addListener(async () => {
-    // triditional quick access (set status on preference change)
-    chrome.action.setPopup({ 'popup': (await chrome.storage.sync.get(['triditional-quick-access']))['triditional-quick-access'] ? 'popup.html' : '' });
+    // traditional quick access (set status on preference change)
+    chrome.action.setPopup({ 'popup': (await chrome.storage.sync.get(['traditional-quick-access']))['traditional-quick-access'] ? 'popup.html' : '' });
 });
 
 // On contextmenu clicked

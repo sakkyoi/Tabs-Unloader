@@ -62,7 +62,7 @@ OR, you can just [download from extension store](#download-from-extension-store)
 | :----- | :---------- |
 | Anti Mistouch | Disallow quick access to disable directly clicking on quick access button |
 | Startup Unload | Auto unload all tabs when browser startup to avoid waste of resources |
-| Triditional Quick Access | Directly clicking on quick access button will not be "unload selected tab(s)", it will be a popup menu from old version |
+| Traditional Quick Access | Directly clicking on quick access button will not be "unload selected tab(s)", it will be a popup menu from old version |
 
 ## Gallery
 
@@ -74,9 +74,9 @@ OR, you can just [download from extension store](#download-from-extension-store)
 
 ![context-quick-access](asset/readme/quick-access-new.png)
 
-- Popup menu in triditional quick access button
+- Popup menu in traditional quick access button
 
-![context-quick-access](asset/readme/quick-access-triditional.png)
+![context-quick-access](asset/readme/quick-access-traditional.png)
 
 - Preference page
 
