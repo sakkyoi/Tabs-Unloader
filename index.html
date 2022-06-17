@@ -152,8 +152,10 @@
             _paq.push([function () {
                 if (!this.isUserOptedOut()) {
                     document.getElementById('opt').textContent = 'You are not opted out. Uncheck this box to opt-out.';
+                    document.getElementById('opt-checkbox').checked = true;
                 } else {
                     document.getElementById('opt').textContent = 'You are currently opted out. Check this box to opt-in.';
+                    document.getElementById('opt-checkbox').checked = false;
                 }
             }]);
             document.getElementById('opt-checkbox').addEventListener('click', (ev) => {
