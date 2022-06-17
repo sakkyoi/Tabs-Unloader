@@ -150,15 +150,19 @@
             })();
 
             _paq.push([function () {
-                document.getElementById('opt').textContent = !this.isUserOptedOut() ? 'You are not opted out. Uncheck this box to opt-out.' : 'You are currently opted out. Check this box to opt-in.';
-                document.getElementById('opt-checkbox').addEventListener('click', (ev) => {
-                    if (ev.target.checked) {
-                        _paq.push(['forgetUserOptOut']);
-                    } else {
-                        _paq.push(['optUserOut']);
-                    }
-                });
+                if (!this.isUserOptedOut()) {
+                    document.getElementById('opt').textContent = 'You are not opted out. Uncheck this box to opt-out.';
+                } else {
+                    document.getElementById('opt').textContent = 'You are currently opted out. Check this box to opt-in.';
+                }
             }]);
+            document.getElementById('opt-checkbox').addEventListener('click', (ev) => {
+                if (ev.target.checked) {
+                    _paq.push(['forgetUserOptOut']);
+                } else {
+                    _paq.push(['optUserOut']);
+                }
+            });
         </script>
         <!-- End Matomo Code -->
     </body>
