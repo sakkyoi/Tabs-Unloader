@@ -149,22 +149,26 @@
             g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
             })();
 
-            _paq.push([function () {
-                if (!this.isUserOptedOut()) {
-                    document.getElementById('opt').textContent = 'You are not opted out. Uncheck this box to opt-out.';
-                    document.getElementById('opt-checkbox').checked = true;
-                } else {
-                    document.getElementById('opt').textContent = 'You are currently opted out. Check this box to opt-in.';
-                    document.getElementById('opt-checkbox').checked = false;
-                }
-            }]);
+            const setOptStatus = () => {
+                _paq.push([function () {
+                    if (!this.isUserOptedOut()) {
+                        document.getElementById('opt').textContent = 'You are not opted out. Uncheck this box to opt-out.';
+                        document.getElementById('opt-checkbox').checked = true;
+                    } else {
+                        document.getElementById('opt').textContent = 'You are currently opted out. Check this box to opt-in.';
+                        document.getElementById('opt-checkbox').checked = false;
+                    }
+                }]);
+            }
             document.getElementById('opt-checkbox').addEventListener('click', (ev) => {
                 if (ev.target.checked) {
                     _paq.push(['forgetUserOptOut']);
                 } else {
                     _paq.push(['optUserOut']);
                 }
+                setOptStatus();
             });
+            setOptStatus();
         </script>
         <!-- End Matomo Code -->
     </body>
