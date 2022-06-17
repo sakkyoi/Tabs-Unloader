@@ -123,7 +123,13 @@
                 <div class="ts-text is-secondary">Made by <a href="https://github.com/sakkyoi" target="_blank">sakyoi</a> with love. Tabs Unloader is opensource on <a href="https://github.com/sakkyoi/Tabs-Unloader" target="_blank"><span class="ts-icon is-github-icon"></span> Github</a> with <a href="/license.html" target="_blank">LGPL-3.0 license</a>.</div>
                 <div class="ts-text is-secondary">This site designed by <a href="https://v4.tocas-ui.com/" class="ts-text is-external-link" target="_blank">Tocas-UI</a>. Tabs Unloader also designed by Tocas-UI.</div>
                 <div class="ts-space"></div>
-                <iframe style="border: 0; height: 200px; width: 600px;" src="https://analytics.sakkyoi.tech/index.php?module=CoreAdminHome&action=optOut&language=en"></iframe>
+                <div class="ts-header is-small is-heavy">Analytics</div>
+                <div class="ts-text is-secondary">
+                    We are aggregating and analyzing the actions you take here by our own analytics server. You can choose to prevent that. Doing so will pretect your privacy, bug will also prevent us from learning from your actions and creating a better experience for your and other users.
+                    <label class="ts-checkbox" id="opt">
+                        <input type="checkbox" id="opt-checkbox">
+                    </label>
+                </div>
                 <div class="ts-space"></div>
                 <div class="ts-text is-secondary"><a href="https://github.com/sakkyoi" target="_blank">Author</a> | <a href="https://github.com/sakkyoi/Tabs-Unloader" target="_blank">Github</a> | <a href="/license.html" target="_blank">License</a> | <a href="/privacy.html" class="ts-text" target="_blank">Privacy Policy</a> | <a href="https://v4.tocas-ui.com/" class="ts-text is-external-link" target="_blank">Tocas-UI</a></div>
             </div>
@@ -141,6 +147,14 @@
             var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
             g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
             })();
+
+            _paq.push([function () {
+                if (this.UserOptedOut()) {
+                    document.getElementById('opt').textContent = 'You are not opted out. Uncheck this box to opt-out.';
+                } else {
+                    document.getElementById('opt').textContent = 'You are currently opted out. Check this box to opt-in.';
+                }
+            }])
         </script>
         <!-- End Matomo Code -->
     </body>
