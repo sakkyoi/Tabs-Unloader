@@ -7,11 +7,10 @@ chrome.runtime.onInstalled.addListener(async (details) => {
     switch (details.reason) {
 
         case "install":
+        case "update": {
             chrome.tabs.create({ 'url': 'https://sakkyoi.github.io/Tabs-Unloader/welcome.html' });
             break;
-        case "update":
-            chrome.tabs.create({ 'url': 'https://sakkyoi.github.io/Tabs-Unloader/welcome.html' });
-            break;
+        }
 
     }
 
@@ -36,7 +35,7 @@ chrome.storage.onChanged.addListener(async () => {
 });
 
 // On contextmenu clicked
-chrome.contextMenus.onClicked.addListener(async (info, tab) => {
+chrome.contextMenus.onClicked.addListener(async (info, _) => {
     unloader(info.menuItemId);
     if (info.menuItemId === '_preference') chrome.tabs.create({ 'url': chrome.runtime.getURL('preference/preference.html') });
 });
